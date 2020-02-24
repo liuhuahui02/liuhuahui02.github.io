@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="path 模块">
+  
+
+  
+  
+  
+  
+  
+  
+  <title>NodeJS入门 | 刘华辉的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="path 模块">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NodeJS入门">
+<meta property="og:url" content="http://yoursite.com/2019/09/23/NodeJS入门/index.html">
+<meta property="og:site_name" content="刘华辉的博客">
+<meta property="og:description" content="path 模块">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-09-25T06:50:30.968Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NodeJS入门">
+<meta name="twitter:description" content="path 模块">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src="//push.zhanzhang.baidu.com/push.js"></script>
+</head></html>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="刘华辉的博客" rel="home">刘华辉的博客</a>
+      </h1>
+      
+        <h2 class="site-description hitokoto"></h2>
+        <script type="text/javascript" src="https://v1.hitokoto.cn/?encode=js"></script>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-NodeJS入门" class="post-NodeJS入门 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      NodeJS入门
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2019/09/23/NodeJS入门/" data-id="ck6zsfeyb0000ccvjojq0w83r" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <blockquote>
+<p>path 模块</p>
+</blockquote>
+<a id="more"></a>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">const path = require(<span class="string">'path'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取路径的最后一部分，文件名称</span></span><br><span class="line">path.basename(<span class="string">'/foo/bar/baz/asdf/quux.html'</span>);</span><br><span class="line"><span class="comment"># 返回: 'quux.html'</span></span><br><span class="line"></span><br><span class="line">path.basename(<span class="string">'/foo/bar/baz/asdf/quux.html'</span>, <span class="string">'.html'</span>);</span><br><span class="line"><span class="comment"># 返回: 'quux'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取路径</span></span><br><span class="line">path.dirname(<span class="string">'/foo/bar/baz/asdf/quux'</span>);</span><br><span class="line">// 返回: <span class="string">'/foo/bar/baz/asdf'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取扩展名</span></span><br><span class="line">path.extname(<span class="string">'index.html'</span>);</span><br><span class="line">// 返回: <span class="string">'.html'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 拼接路径 (..表示上层路径，往上走一层)</span></span><br><span class="line">path.join(<span class="string">'/foo'</span>, <span class="string">'bar'</span>, <span class="string">'baz/asdf'</span>, <span class="string">'quux'</span>, <span class="string">'..'</span>);</span><br><span class="line">// 返回: <span class="string">'/foo/bar/baz/asdf'</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="异步I-O-input-output"><a href="#异步I-O-input-output" class="headerlink" title="异步I/O input/output"></a>异步I/O input/output</h4><ul>
+<li>文件操作</li>
+<li>网络操作</li>
+</ul>
+<h4 id="在游览器中也存在异步操作："><a href="#在游览器中也存在异步操作：" class="headerlink" title="在游览器中也存在异步操作："></a>在游览器中也存在异步操作：</h4><ul>
+<li>定时任务</li>
+<li>事件处理</li>
+<li>Ajax回调处理</li>
+</ul>
+<h4 id="js的运行时是单线程的，并且引入事件队列机制"><a href="#js的运行时是单线程的，并且引入事件队列机制" class="headerlink" title="js的运行时是单线程的，并且引入事件队列机制"></a>js的运行时是单线程的，并且引入事件队列机制</h4><h4 id="Node-js中的事件模型与浏览器中的事件模型类似，（单线程-事件队列）"><a href="#Node-js中的事件模型与浏览器中的事件模型类似，（单线程-事件队列）" class="headerlink" title="Node.js中的事件模型与浏览器中的事件模型类似，（单线程 + 事件队列）"></a>Node.js中的事件模型与浏览器中的事件模型类似，（单线程 + 事件队列）</h4><h4 id="Node-js中异步执行的任务："><a href="#Node-js中异步执行的任务：" class="headerlink" title="Node.js中异步执行的任务："></a>Node.js中异步执行的任务：</h4><ul>
+<li>文件I/O</li>
+<li>网络I/O</li>
+</ul>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2019/09/23/NodeJS入门/">
+    <time datetime="2019-09-23T08:24:34.000Z" class="entry-date">
+        2019-09-23
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2019/09/19/初识nunjucks模板引擎/" rel="next">初识nunjucks模板引擎 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2019/09/23/NodeJS入门/">NodeJS入门</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/19/初识nunjucks模板引擎/">初识nunjucks模板引擎</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/17/初识express/">初识express</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/16/我的第一篇博客/">我的第一篇博客</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/16/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2020 刘华辉
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/js/share.js'];</script>
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"superSample":2,"width":200,"height":400,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"tagMode":false});</script></body>
+</html>

@@ -26,7 +26,7 @@ ECMAScript 是 Javascript 语言规范">
 <meta property="og:site_name" content="刘华辉的博客">
 <meta property="og:description" content="今天学习 HEXO 创建 github 博客123456789101112131415npm install hexo-cli -ghexo init blogcd bloghexo server# 新建文章hexo new 文章标题# 一键部署到githubhexo generate --deployhexo deploy --generate# 简写hexo g -dhexo d -g  初识">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-17T08:09:34.231Z">
+<meta property="og:updated_time" content="2019-09-23T07:00:55.301Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我的第一篇博客">
 <meta name="twitter:description" content="今天学习 HEXO 创建 github 博客123456789101112131415npm install hexo-cli -ghexo init blogcd bloghexo server# 新建文章hexo new 文章标题# 一键部署到githubhexo generate --deployhexo deploy --generate# 简写hexo g -dhexo d -g  初识">
@@ -85,7 +85,7 @@ ECMAScript 是 Javascript 语言规范">
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2019/09/16/我的第一篇博客/" data-id="ck0q2i7ol0003sgvj73kslj3c" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2019/09/16/我的第一篇博客/" data-id="ck6zsfeyk0004ccvjd2nxwtho" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -103,14 +103,27 @@ ECMAScript 是 Javascript 语言规范">
 <p>let 和 const </p>
 </blockquote>
 <ul>
-<li>let 块级声明变量，只在它所在的代码块内有效，且不存在 变量提升，不允许重复声明</li>
-<li>const 声明变量 是 不可变的常量，必须赋值</li>
+<li>let 块级声明变量，只在它所在的代码块内有效，且不存在变量提升(不允许提前解析)，不允许重复声明</li>
+<li>const 声明变量 是 不可变的常量，必须初始化赋值</li>
 </ul>
+<blockquote>
+<p>变量的解构赋值</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 数组的解构赋值</span></span><br><span class="line"><span class="built_in">let</span> [a, b, c] = [1, 2, 3]</span><br><span class="line"><span class="comment"># a = 1  b = 2  c = 3</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 对象的解构赋值</span></span><br><span class="line"><span class="built_in">let</span> &#123;foo,bar&#125; = &#123;foo: <span class="string">'hello'</span>, bar: <span class="string">'hi'</span>&#125;</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>模板字符串</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> name = <span class="string">'huihui'</span></span><br><span class="line">`Hello <span class="variable">$&#123;name&#125;</span>, how are you?`</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li>字符串的扩展<ul>
+<li>includes() 判断字符串中是否包含指定的字符，参一：匹配的字符串，参二：从第几个开始</li>
+<li>startsWith() 判断字符串是否以特定的字符开始</li>
+<li>endsWith() 判断字符串是否以特定的字符结束</li>
+</ul>
+</li>
+</ul>
 <blockquote>
 <p>数组的扩展</p>
 </blockquote>
@@ -193,6 +206,10 @@ ECMAScript 是 Javascript 语言规范">
       <ul>
         
           <li>
+            <a href="/2019/09/23/NodeJS入门/">NodeJS入门</a>
+          </li>
+        
+          <li>
             <a href="/2019/09/19/初识nunjucks模板引擎/">初识nunjucks模板引擎</a>
           </li>
         
@@ -220,7 +237,7 @@ ECMAScript 是 Javascript 语言规范">
 </div>
       </div>
       <footer id="colophon" role="contentinfo">
-    <p>&copy; 2019 刘华辉
+    <p>&copy; 2020 刘华辉
     All rights reserved.</p>
     <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
 </footer>
